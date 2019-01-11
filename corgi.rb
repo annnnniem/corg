@@ -27,10 +27,6 @@ def send_reply
 								  :body => '<html><body><img src="https://gph.is/1cpsZE7"></body></html>')
 end
 
-get '/' do 
-	"Hello"
-end
-
 post '/' do
 	convo_id = JSON.parse(request.body.read)["data"]["item"]["id"]
 	puts convo_id
