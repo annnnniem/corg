@@ -27,15 +27,13 @@ def send_reply
 								  :body => '<html><body><img src="https://gph.is/1cpsZE7"></body></html>')
 end
 
-class Corgi < Sinatra::Base
-	get '/' do 
-		erb :index
-	end
+get '/' do 
+	"Hello"
+end
 
-	post '/' do
-		convo_id = JSON.parse(request.body.read)["data"]["item"]["id"]
-		puts convo_id
-		get_convo(convo_id)
-	end
+post '/' do
+	convo_id = JSON.parse(request.body.read)["data"]["item"]["id"]
+	puts convo_id
+	get_convo(convo_id)
 end
 
