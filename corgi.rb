@@ -29,7 +29,7 @@ end
 
 class Corgi < Sinatra::Base
 	get '/' do 
-		"Hello World"
+		erb :index
 	end
 
 	post '/' do

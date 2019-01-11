@@ -1,0 +1,2 @@
+require "./corgi"
+run Corgi
