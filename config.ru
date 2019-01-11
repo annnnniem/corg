@@ -1,2 +1,2 @@
 require "./corgi"
-run Corgi
+run Sinatra::Application
