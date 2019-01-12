@@ -15,7 +15,7 @@ post '/' do
 		puts "Convo contains corgi"
 		initialize_intercom
 		convo_id = response["data"]["item"]["id"]
-		@intercom.conversations.reply(:id => convo_id, :type => 'admin', :admin_id => '1283891',
+		@intercom.conversations.reply(:id => convo_id, :type => 'admin', :admin_id => ENV['admin'],
 								  :message_type => 'comment', 
 								  :body => '<html><body><img src="https://i.giphy.com/media/KLbq09EoE1uDu/giphy.webp"></body></html>')
 
@@ -29,4 +29,4 @@ def initialize_intercom
 	end
 end
 
-#ask joel: moving this into methods -- how do I set up my variables?
+#ask for help: moving this into methods -- BPA for managing variables?
