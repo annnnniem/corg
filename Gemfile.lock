@@ -22,7 +22,6 @@ DEPENDENCIES
   dotenv
   intercom
   json
-  rack
   sinatra
 
 RUBY VERSION
